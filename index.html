@@ -4,54 +4,664 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akash's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#introduction">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="introduction">
-        <h1>Hi, I'm Akash</h1>
-        <p>I am a Computer Science student with a concentration in Networks and Security at Colorado State University, passionate about cybersecurity.</p>
+    <script src="script.js"></script>
+    <nav id="desktop-nav">
+        <div class="logo">Akash Reddy Maligireddy</div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience2">Experience</a></li>
+            <li><a href="#experience">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav id="hamburger-nav">
+        <div class="logo">Akash Reddy Maligireddy</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience2" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+      </nav>
+      <section id="profile">
+        <div class="section__pic-container">
+          <img src="./assets/Akash.png" class="profile-pic" alt="Akash's Profile Picture" />
+        </div>
+        <div class="section__text">
+          <p class="section__text__p1">Hello, I'm</p>
+          <h1 class="title">Akash Reddy</h1>
+          <p class="section__text__p2">Data Engineer and Full Stack Software Engineer</p>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2"
+              onclick="window.open('./assets/resume.pdf')"
+            >
+              Download CV
+            </button>
+            <button class="btn btn-color-1" onclick="location.href='./#contact'">
+              Contact Info
+            </button>
+          </div>
+          <div id="socials-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              class="icon"
+              onclick="location.href='https://linkedin.com/in/akashreddymaligireddy'"
+            />
+            <img
+              src="./assets/github.png"
+              alt="My Github profile"
+              class="icon"
+              onclick="location.href='https://github.com/AkashReddy22'"
+            />
+          </div>
+          
+        </div>
+        
+      </section>
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+          <div class="section__pic-container">
+            <img
+              src="./assets/about-pic.png"
+              alt="Profile picture"
+              class="about-pic"
+            />
+          </div>
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img
+                  src="./assets/experience.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <h3>Experience</h3>
+                <p>2+ years <br />Data Engineering, Analytics and Software Development</p>
+              </div>
+              <div class="details-container">
+                <img
+                  src="./assets/education.png"
+                  alt="Education icon"
+                  class="icon"
+                />
+                <h3>Education</h3>
+                <p>MS in Computer Science @ASU <br />M.Sc. Economics + B.E. in Electronics Engineering @BITS, Pilani</p>
+              </div>
+            </div>
+            <div class="text-container">
+              <p>
+                Hard-working, detail-oriented, results-driven, responsible and creative Computer Science graduate seeking a full-time position in the field of Data Engineering, Data Analytics, Software Development, or related fields.
+                I am a Data Engineer and Full Stack Software Engineer with 2+ years of experience in developing and maintaining data pipelines, building data models, and creating data visualizations. 
+                I have a Master's degree in Computer Science from Arizona State University and a dual degree in Economics and Electronics Engineering from BITS, Pilani. 
+                I am passionate about leveraging data to drive business decisions and building scalable software solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#experience'"
+        />
     </section>
-    <section id="skills">
-        <h2>Skills & Tech Stack</h2>
-        <ul>
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li>ReactJS</li>
-            <li>Python</li>
-            <li>... (add more skills here)</li>
-        </ul>
+    <section id="experience2">
+      <p class="section__text__p1">Learn more about my</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+                <div class="details-container">
+                  <h3>Ganges Systems</h3>
+                  <p>July 2023 - May 2024 <br />Data Engineering Intern</p>
+                  <p> Key responsibilities: Monitor Data pipelines, design data models and ETL, Test scripts for data validity and integrity </p>
+                </div>
+                <div class="details-container">
+                  <h3>Arizona State University</h3>
+                  <p> May2023 - May 2024<br /> Software Engineer (Data)</p>
+                  <p> Key responsibilities: Design, develop and deploy Full-stack web applications; 
+                    Data backups; regular server updates; 
+                    Integrate CAS into applications for ASU governance policies;
+                  Database design, and data migration</p>
+                </div>
+                
+        </div>
+        <div class="about-containers">
+            <div class="details-container">
+              <h3>Tesser Insights</h3>
+              <p>May 2023 - July 2023 <br />Software Development Intern</p>
+              <p> Key responsibilities: Test Code migrations on Azure Databricks;
+                 Bug fixes; Hyperparameter Tuning;
+                Optimize Spark codes, and regular performance checks</p>
+
+            </div>
+            <div class="details-container">
+              <h3>JPMorgan Chase & Co.</h3>
+              <p> Aug 2021 - June 2022<br /> Strategy Analytics</p>
+              <p> Key responsibilities: Develop ETL pipelines; Big Data Analysis; Strategy development in CCB line of business;
+                Data visualization; Customer Risk Analysis; primarly focused on Data Engineering and Analytical tasks</p>
+              </p>
+            </div>
+            
+    </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Skills</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title">Data Engineering/ Analytics</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Python</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>SQL</h3>
+                      <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>NoSQL</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Scala</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Spark</h3>
+                      <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Kafka</h3>
+                      <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Docker</h3>
+                      <p>Intermediate</p>
+                    </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Kubernetes</h3>
+                      <p>Intermediate</p>
+                    </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Airflow</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>AWS, Azure</h3>
+                      <p>Experienced</p>
+                    </div>
+                  </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>DBT</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>RDBMS</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Data Modelling</h3>
+                      <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Data Warehousing</h3>
+                      <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Tableau</h3>
+                      <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Machine Learning</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                
+
+              </div>
+            </div>
+            <div class="details-container">
+              <h2 class="experience-sub-title">Full Stack Development</h2>
+              <div class="article-container">
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Java</h3>
+                      <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>PostgreSQL</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>MySQL</h3>
+                      <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Node JS</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Flask</h3>
+                      <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>HTML, CSS</h3>
+                      <p>Experienced</p>
+                    </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>React JS</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Git</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Django</h3>
+                      <p>Basic</p>
+                    </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Spring</h3>
+                      <p>Basic</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>JavaScript</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Design Patterns</h3>
+                      <p>Basic</p>
+                    </div>
+                  </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Apache HTTP Server</h3>
+                      <p>Intermediate</p>
+                    </div>
+                </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>Postman</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>REST, AJAX</h3>
+                      <p>Experienced</p>
+                    </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#projects'"
+        />
     </section>
     <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of project 1.</p>
-            <a href="https://github.com/yourgithub/project1">View on GitHub</a>
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">AWS Elastic Image Recognition Application- IaaS </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/AkashReddy22/AWS--Elastic-Image-Recognition-Application-IaaS/tree/main'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">NYC Taxicab Cloud ETL Pipeline, Graph Modelling on Neo4j</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+        <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Disease prediction Java Web App (Healthcare)</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+            </div>
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of project 2.</p>
-            <a href="https://github.com/yourgithub/project2">View on GitHub</a>
+        <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project4.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Covid Data warehouse- Redshift</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/AkashReddy22/covid-Data-Warehousing-on-Redshift/tree/main'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
         </div>
-        <!-- Add more projects as needed -->
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
     </section>
     <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me at <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        <!-- Alternatively, you can add a contact form here -->
-    </section>
-    <footer>
-        <p>Connect with me on <a href="https://www.linkedin.com/in/yourlinkedin/">LinkedIn</a> and <a href="https://github.com/yourgithub">GitHub</a>.</p>
-    </footer>
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="./assets/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+            />
+            <p><a href="mailto:examplemail@gmail.com">akashreddymaligi55@gmail.com</a></p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon contact-icon"
+            />
+            <p><a href="https://linkedin.com/in/akashreddymaligireddy">LinkedIn</a></p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience2">Experience</a></li>
+                <li><a href="#experience">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+          </div>
+        </nav>
+      </footer>
+      <script src="script.js"></script>
+    </body>
+
+
 </body>
 </html>
